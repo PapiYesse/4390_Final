@@ -1,0 +1,126 @@
+@page
+@model webapp.Pages.Assessment.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeA_CIDM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeB_CIDM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeC_CIDM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeD_CIDM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeF_CIDM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].GradeX_CIDM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].Modifications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].Student_Feedback)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].Reflection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assessment[0].Proposed_Actions)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Assessment) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeA_CIDM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeB_CIDM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeC_CIDM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeD_CIDM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeF_CIDM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GradeX_CIDM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modifications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student_Feedback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reflection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proposed_Actions)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AssessmentId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AssessmentId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AssessmentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace webapp.Models
 {
-	public class PARDbContext : DbContext
+	public class PARDbContext_ : DbContext
 	{
-		public PARDbContext (DbContextOptions<PARDbContext> options)
+		public PARDbContext_ (DbContextOptions<PARDbContext_> options)
 			: base(options)
 		{
 		}
