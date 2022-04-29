@@ -12,6 +12,7 @@ public class Semester
 
 public class AcademicYearPeriod
 {
+    public int AcademicYP {get; set;}
     public int Year { get; set; }
     public Semester Semester { get; set; }
    
