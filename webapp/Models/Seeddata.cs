@@ -9,7 +9,7 @@ namespace webapp.Models{
     public static class seeddata{
           public static void Initialize(IServiceProvider serviceProvider)
         {
-     using (var context = newPARDbContext(
+     using (var context = new PARDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<PARDbContext>>()))
 {
     if(context.Instructor.Any){
