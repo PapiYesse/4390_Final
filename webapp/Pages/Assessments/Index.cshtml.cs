@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using webapp.Models;
 
-namespace webapp.Pages.Assessment
+namespace webapp.Pages.Assessments
 {
     public class IndexModel : PageModel
     {
