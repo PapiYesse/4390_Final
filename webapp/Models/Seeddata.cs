@@ -5,18 +5,13 @@ using System.Linq;
 using System.Collections.Generic;
 
 namespace webapp.Models{
-<<<<<<< HEAD
     public static class seeddata{
-          public static void Initialize(IServiceProvider serviceProvider)
-        {
-     using (var context = new PARDbContext(
-                serviceProvider.GetRequiredService<DbContextOptions<PARDbContext>>()))
-=======
-    public static class Seeddata{
-        public static void Initialize(IServiceProvider serviceProvider)
->>>>>>> 54e479c72e50575b2675720549d38d75648bbc85
+          public static void Initialize(IServiceProvider serviceProvider)
+     {
+     using(var context = new PARDbContext(
+        serviceProvider.GetRequiredService<DbContextOptions<PARDbContext>>()))
 {
-    using (var context = new PARDbContext(
+    using (var contexts = new PARDbContext(
         serviceProvider.GetRequiredService<DbContextOptions<PARDbContext>>()))
 {
     if(context.Instructors.Any()){
@@ -70,4 +65,4 @@ namespace webapp.Models{
 }
     }
 
-}
+}}

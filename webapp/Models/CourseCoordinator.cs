@@ -6,7 +6,7 @@ namespace webapp.Models;
 
 public class CourseCoordinator
 {
-    public int CoordinatorId { get; set; }
+    public int CourseCoordinatorId { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public List<Course> Courses {get; set;} 
