@@ -1,18 +1,25 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Linq;
 using System.Collections.Generic;
-using webapp.Models;
 
 namespace webapp.Models{
+<<<<<<< HEAD
     public static class seeddata{
           public static void Initialize(IServiceProvider serviceProvider)
         {
      using (var context = new PARDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<PARDbContext>>()))
+=======
+    public static class Seeddata{
+        public static void Initialize(IServiceProvider serviceProvider)
+>>>>>>> 54e479c72e50575b2675720549d38d75648bbc85
 {
-    if(context.Instructor.Any){
+    using (var context = new PARDbContext(
+        serviceProvider.GetRequiredService<DbContextOptions<PARDbContext>>()))
+{
+    if(context.Instructors.Any()){
         return;
     }
     List <Instructor> Instructors= new List<Instructor>{
