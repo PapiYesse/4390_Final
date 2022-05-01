@@ -1,4 +1,4 @@
 # 4390_Final
 
 
-dotnet aspnet-codegenerator razorpage -m webapp.Models.Course -dc PARDbContext -udl -outDir Pages\Course --referenceScriptLibraries -sqlite
+dotnet aspnet-codegenerator razorpage -m webapp.Models.Instructor -dc PARDbContext -udl -outDir Pages\Instructors --referenceScriptLibraries -sqlite

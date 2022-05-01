@@ -13,4 +13,12 @@ using webapp.Models;
         }
 
         public DbSet<webapp.Models.Assessment> Assessment { get; set; }
+
+        public DbSet<webapp.Models.AcademicYearPeriod> AcademicYearPeriod { get; set; }
+
+        public DbSet<webapp.Models.Course> Course { get; set; }
+
+        public DbSet<webapp.Models.CourseCoordinator> CourseCoordinator { get; set; }
+
+        public DbSet<webapp.Models.Instructor> Instructor { get; set; }
     }
