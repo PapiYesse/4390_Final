@@ -6,7 +6,7 @@ namespace webapp.Models;
 
 public class AcademicYearPeriod
 {
-    public int AcademicId {get; set;}
+    public int AcademicYearPeriodId {get; set;}
     public int Year { get; set; }
     public string Semester { get; set; }
    
