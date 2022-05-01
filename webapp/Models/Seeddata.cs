@@ -14,14 +14,14 @@ namespace webapp.Models{
     if(context.Instructors.Any()){
         return;
     }
-    List <Instructor> Instructors= new List<Instructor>{
+    context.Instructors.AddRange(
         new Instructor{FirstName= "Jeff", LastName= "Babb"},
         new Instructor{FirstName="Kareem", LastName="Dana"},
         new Instructor{FirstName="Liang", LastName="Chen"},
         new Instructor{FirstName="Sean", LastName="Humphries"},
         new Instructor{FirstName="Katelyn", LastName="Sell"},
         new Instructor{FirstName= "Neil", LastName="Meredith"}
- };
+    );
  context.CourseCoordinators.AddRange(
     new CourseCoordinator{FirstName="Jeremiah", LastName="Roussell"},
     new CourseCoordinator{FirstName="Dawn", LastName="Sott"},
