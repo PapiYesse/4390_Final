@@ -4,14 +4,57 @@
 @{
     ViewData["Title"] = "Create";
 }
-
-<h1>Create</h1>
-
-<h4>Assessment</h4>
+<center>
+<h1>Faculty Course Assessment Report</h1>
+</center>
+<center>
+<h4>Computer Information & Decision Management Department</h4>
 <hr />
+</center>
 <div class="row">
     <div class="col-md-4">
         <form method="post">
+            <div class="form-group">
+                <label asp-for="Assessment.CourseName" class="control-label"></label>
+                <select asp-for="Assessment.CourseName" asp-items="Model.CoursesDropDown" class="form-control" />
+                    <option value="">--Select Course--</option> 
+                </select>
+            <hr/>
+            <div class="form-group">
+                <label asp-for="AcademicYearPeriod.Semester" class="control-label"></label>
+                <select asp-for="AcademicYearPeriod.Semester" asp-items="Model.SemesterDropDown" class="form-control" />
+                    <option value="">--Select Semester--</option> 
+                </select>
+            <hr/>
+            <div class="form-group">
+                <label asp-for="AcademicYearPeriod.Year" class="control-label"></label>
+                <select asp-for="AcademicYearPeriod.Year" asp-items="Model.YearDropDown" class="form-control" />
+                    <option value="">--Select Year--</option> 
+                </select>
+            <hr/>
+            <div class="form-group">
+                <label asp-for="Course.Instructor" class="control-label"></label>
+                <select asp-for="Course.Instructor" asp-items="Model.InstructorDropDown" class="form-control" />
+                    <option value="">--Select Instructor--</option> 
+                </select>
+            <hr/>
+            <h4>1. Course Coordinator: </h4>
+<hr />
+                <div class="form-group">
+                <select asp-for="Assessment.CourseCoordinator" asp-items="Model.CoordinatorDropDown" class="form-control" />
+                    <option value="">--Select Coordinator--</option> 
+                </select>
+                <hr/>
+            <h4>2. Catalog Description: </h4>
+                <div class="form-group">
+                <input asp-for="Course.CatalogDescription" class="form-control" />
+                <span asp-validation-for="Course.CatalogDescription" class="text-danger"></span>
+            </div>
+    <hr/>
+<hr />
+            </div>
+            <h4>3. Grade Distribution: </h4>
+<hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Assessment.GradeA" class="control-label"></label>
@@ -73,28 +116,37 @@
                 <input asp-for="Assessment.GradeX_CIDM" class="form-control" />
                 <span asp-validation-for="Assessment.GradeX_CIDM" class="text-danger"></span>
             </div>
+        <hr/>
+            <h4>4. Modifications Made to the Course: </h4>
+<hr />
             <div class="form-group">
-                <label asp-for="Assessment.Modifications" class="control-label"></label>
                 <input asp-for="Assessment.Modifications" class="form-control" />
                 <span asp-validation-for="Assessment.Modifications" class="text-danger"></span>
             </div>
+    <hr/>
+            <h4>5. Student Feedback: </h4>
+<hr />
             <div class="form-group">
-                <label asp-for="Assessment.Student_Feedback" class="control-label"></label>
                 <input asp-for="Assessment.Student_Feedback" class="form-control" />
                 <span asp-validation-for="Assessment.Student_Feedback" class="text-danger"></span>
             </div>
+        <hr/>
+        <h4>6. Reflection: </h4>
+<hr />
             <div class="form-group">
-                <label asp-for="Assessment.Reflection" class="control-label"></label>
                 <input asp-for="Assessment.Reflection" class="form-control" />
                 <span asp-validation-for="Assessment.Reflection" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Assessment.Proposed_Actions" class="control-label"></label>
+        <hr/>
+        <h4>7. Proposed Actions for Course Improvement: </h4>
+<hr />
                 <input asp-for="Assessment.Proposed_Actions" class="form-control" />
                 <span asp-validation-for="Assessment.Proposed_Actions" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <hr />
+                <input type="submit" value="Add Assessment" class="btn btn-primary" />
             </div>
         </form>
     </div>
