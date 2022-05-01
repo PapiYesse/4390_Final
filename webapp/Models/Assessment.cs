@@ -24,5 +24,10 @@ namespace webapp.Models
         public string Student_Feedback {get; set;}
         public string Reflection {get; set;}
         public string Proposed_Actions {get; set;}
+        public int CourseId {get; set; }
+        public string CourseName {get; set; }
+        public Course Course {get; set; }
+        public CourseCoordinator CourseCoordinator {get; set; }
+        public Instructor Instructor {get; set; }
     }
-}
+} 
