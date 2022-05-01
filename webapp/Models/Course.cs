@@ -11,13 +11,12 @@ namespace webapp.Models
         public string CourseName {get; set;}
         public string CatalogDescription {get; set; }
         public int Section {get; set;}
-        public string Semester {get; set;}
-        public int Year {get; set;}
+        public AcademicYearPeriod AcademicYearPeriod {get; set;}
         public string Course_Status {get; set;}
         public int TotalStudents {get; set; }
         public int TotalCIDM {get; set; }
         public CourseCoordinator CourseCoordinator {get; set; }
-        //public Instructor Instructor {get; set; }
+        public Instructor Instructor {get; set; }
 
     }
         public class CourseAssessment
